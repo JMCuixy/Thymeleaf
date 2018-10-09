@@ -1,0 +1,5 @@
+spring:
+  datasource:
+    url: jdbc:mysql://192.168.1.199/yycx_marge?useSSL=true&amp;useUnicode=true&amp&characterEncoding=utf-8&amp;allowMultiQueries=true&amp;zeroDateTimeBehavior=convertToNull&amp;serverTimezone=GMT%2b8
+    username: root
+    password: yycx!Mysql123
