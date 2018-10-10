@@ -1,5 +1,19 @@
 spring:
+  thymeleaf:
+    prefix: classpath:/templates/
+    suffix: .html
+    cache: false
+    servlet:
+      content-type: text/html
+    enabled: true
+    encoding: UTF-8
+    mode: HTML5
   datasource:
     url: jdbc:mysql://192.168.1.199/yycx_marge?useSSL=true&amp;useUnicode=true&amp&characterEncoding=utf-8&amp;allowMultiQueries=true&amp;zeroDateTimeBehavior=convertToNull&amp;serverTimezone=GMT%2b8
     username: root
     password: yycx!Mysql123
+  mail:
+    host: smtp.163.com
+    port: 25
+    username: 15980292662@163.com
+    password: Jmcui090308
