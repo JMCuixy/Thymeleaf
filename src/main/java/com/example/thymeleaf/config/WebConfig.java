@@ -10,6 +10,8 @@ import org.thymeleaf.spring5.view.ThymeleafViewResolver;
 import org.thymeleaf.templatemode.TemplateMode;
 import org.thymeleaf.templateresolver.ITemplateResolver;
 
+import java.nio.charset.Charset;
+
 /**
  * thymeleaf 的相关自定义配置，可以不配置使用默认的即可，这里主要是为了熟悉过程。
  *
@@ -30,6 +32,7 @@ public class WebConfig {
     public ViewResolver viewResolver(SpringTemplateEngine springTemplateEngine){
         ThymeleafViewResolver resolver = new ThymeleafViewResolver();
         resolver.setTemplateEngine(springTemplateEngine);
+        resolver.setCharacterEncoding("UTF-8");
         return resolver;
     }
 
@@ -59,6 +62,7 @@ public class WebConfig {
         templateResolver.setTemplateMode(TemplateMode.HTML);
         templateResolver.setCacheable(false);
         templateResolver.setTemplateMode("HTML5");
+        templateResolver.setCharacterEncoding("UTF-8");
         return templateResolver;
     }
 
