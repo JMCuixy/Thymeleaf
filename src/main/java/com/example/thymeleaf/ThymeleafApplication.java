@@ -6,6 +6,20 @@ import org.springframework.boot.builder.SpringApplicationBuilder;
 import org.springframework.boot.context.properties.EnableConfigurationProperties;
 import org.springframework.boot.web.servlet.support.SpringBootServletInitializer;
 
+
+@SpringBootApplication
+@EnableConfigurationProperties
+public class ThymeleafApplication {
+
+    public static void main(String[] args) {
+        SpringApplication.run(ThymeleafApplication.class, args);
+    }
+}
+
+/**
+ * War 包部署方式
+ */
+/*
 @SpringBootApplication
 @EnableConfigurationProperties
 public class ThymeleafApplication extends SpringBootServletInitializer {
@@ -19,3 +33,4 @@ public class ThymeleafApplication extends SpringBootServletInitializer {
         SpringApplication.run(ThymeleafApplication.class, args);
     }
 }
+*/
