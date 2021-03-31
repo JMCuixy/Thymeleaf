@@ -9,9 +9,23 @@ spring:
     encoding: UTF-8
     mode: HTML5
   datasource:
-    url: jdbc:mysql://192.168.1.199/yycx_marge?useSSL=true&amp;useUnicode=true&amp&characterEncoding=utf-8&amp;allowMultiQueries=true&amp;zeroDateTimeBehavior=convertToNull&amp;serverTimezone=GMT%2b8
+    url: jdbc:mysql://dev1.yungu-link.com/test?useSSL=false&useUnicode=true&characterEncoding=utf-8&allowMultiQueries=true&zeroDateTimeBehavior=convertToNull&serverTimezone=GMT%2b8
     username: root
-    password: yycx!Mysql123
+    password: '1111111'
+    driverClassName: com.mysql.jdbc.Driver
+    initialSize: 10
+    minIdle: 10
+    maxActive: 200
+    maxWait: 60
+    timeBetweenEvictionRunsMillis: 60000
+    minEvictableIdleTimeMillis: 300000
+    validationQuery: SELECT 'x' FROM DUAL
+    testWhileIdle: true
+    testOnBorrow: false
+    testOnReturn: false
+    poolPreparedStatements: true
+    maxPoolPreparedStatementPerConnectionSize: 20
+    filters: stat
   mail:
     host: smtp.163.com
     port: 25
@@ -26,7 +40,7 @@ management:
         include: '*'
     web:
       exposure:
-      # exclude: '*'
+        # exclude: '*'
         include: ["health","info","beans","mappings","logfile","metrics","shutdown","env","my"]
       base-path: /actuator  # 配置 Endpoint 的基础路径
       cors: # 配置跨域资源共享
