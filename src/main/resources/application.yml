@@ -100,3 +100,10 @@ info:
     encoding: UTF-8
     java.source: 1.8
     java.traget: 1.8
+
+hbase:
+    config:
+      hbase.zookeeper.quorum: 127.0.0.1,127.0.0.2,127.0.0.3
+      hbase.zookeeper.property.clientPort: 2181
+      fs.defaultFS: hdfs://cc-11:8020
+      fs.trash.interval: 1
